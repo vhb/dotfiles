@@ -13,6 +13,8 @@ compilation_database_folder = ''
 # compilation database set.
 flags = [
     '-Wall',
+    '-W',
+    '-Wextra',
     '-std=c++11',
     '-stdlib=libc++',
     '-x',

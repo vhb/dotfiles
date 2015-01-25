@@ -12,7 +12,7 @@ yum install sudo
 yum groupinstall -y development # Way to much thing but way to easy
 
 # Add some usefull stuff
-yum install -y zsh mosh mlocate zlib-dev xz-libs openssl-devel sqlite-devel bzip2-devel 
+yum install -y zsh strace cmake htop mosh mlocate zlib-dev xz-libs openssl-devel sqlite-devel bzip2-devel 
 
 # Setup docker
 yum -y install docker

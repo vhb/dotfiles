@@ -48,14 +48,14 @@ ZSH_THEME="robbyrussell"
 plugins=(git, python)
 
 source $ZSH/oh-my-zsh.sh
-source $HOME/stupeflix/path.sh
 
 # User configuration
 
-export PATH="/opt/local/bin:/opt/local/sbin:/usr/local/osg/debug/bin:/usr/local/bin:/usr/local/sbin:/usr/bin:/bin:/usr/sbin"
-export PATH="$PATH:/usr/local/texlive/2014/bin/:/usr/local/texlive/2014/bin/universal-darwin:/Users/mschwab/config/bin"
-    export PATH="$HOME/Library/Haskell/bin:$PATH"
-export PYTHONPATH="$PYTHONPATH:/usr/local/lib/python2.7/site-packages/"
+export PATH="/opt/local/bin:/opt/local/sbin:/usr/local/bin:/usr/local/sbin:/usr/bin:/bin:/usr/sbin"
+export PATH="$PATH:/usr/local/texlive/2014/bin:/usr/local/texlive/2014/bin/universal-darwin"
+export PATH="$HOME/Library/Haskell/bin:$PATH"
+export PYTHONPATH="$PYTHONPATH:/usr/local/lib/python2.7/site-packages"
+export PATH=$PATH:/usr/local/Cellar/go/1.0.2/bin
 
 export GOPATH="$HOME/go"
 alias ghcmod=ghc-mod
@@ -63,7 +63,11 @@ alias ghcmod=ghc-mod
 export LC_CTYPE="en_US.UTF-8"
 
 alias rm='rm -i'
-alias vim='gvim -v'
+if [[  "$(uname)" == "Darwin"  ]]; then
+    alias vim="mvim -v"
+    alias gvim="mvim"
+fi
+#alias vim='gvim -v'
 # export MANPATH="/usr/local/man:$MANPATH"
 
 # You may need to manually set your language environment

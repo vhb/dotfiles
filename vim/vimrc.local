@@ -4,4 +4,4 @@ au WinLeave * set nocursorline nocursorcolumn
 au WinEnter * set cursorline cursorcolumn
 set cursorline cursorcolumn
 Bundle 'udonmai/Conque-Shell'
-command Ja 'ConqueTerm jarvis -f %'
+map ; :

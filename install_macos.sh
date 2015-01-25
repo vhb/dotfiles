@@ -1,11 +1,9 @@
-brew doctor > /dev/null 2> /dev/null
-
-if [[ $? ]]; then
-    echo "Brew is not fine, please fix it"
+brew doctor > /dev/null 2> /dev/null || \
+    echo "Brew is not fine, please fix it" || \
     exit
-fi
 
 brew_binaries=(
+    ssh-copy-id
     brew-cask
     cairo
     cmake
@@ -53,5 +51,8 @@ brew_cask_app=(
 
 brew install $brew_binaries
 brew cask install $brew_cask_app
+brew cask alfred
 
 brew doctor
+
+sh ./install_cargo.sh

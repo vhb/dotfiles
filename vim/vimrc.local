@@ -2,6 +2,8 @@ let g:syntastic_cpp_compiler = 'clang++'
 let g:syntastic_cpp_compiler_options = ' -std=c++11 -stdlib=libc++'
 au WinLeave * set nocursorline nocursorcolumn
 au WinEnter * set cursorline cursorcolumn
+set colorcolumn=80
 set cursorline cursorcolumn
 Bundle 'udonmai/Conque-Shell'
 map ; :
+set textwidth=80

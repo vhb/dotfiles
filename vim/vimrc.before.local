@@ -1,4 +1,6 @@
 let g:spf13_bundle_groups=['general', "go", 'programming', 'python', 'javascript', 'html', 'misc', "youcompleteme"]
+
+
 let g:ycm_register_as_syntastic_checker = 1 "default 1
 let g:ycm_global_ycm_extra_conf = '.vim/bundle/YouCompleteMe/third_party/ycmd/cpp/ycm/.ycm_extra_conf.py'
 let g:ycm_enable_diagnostic_signs = 1

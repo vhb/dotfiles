@@ -5,5 +5,7 @@ au WinEnter * set cursorline cursorcolumn
 set colorcolumn=80
 set cursorline cursorcolumn
 Bundle 'udonmai/Conque-Shell'
+Bundle 'digitaltoad/vim-jade.git'
+Bundle 'wavded/vim-stylus'
 map ; :
 set textwidth=80

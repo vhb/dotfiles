@@ -27,5 +27,8 @@ let g:ycm_confirm_extra_conf = 1
 
 let g:ycm_goto_buffer_command = 'same-buffer' "[ 'same-buffer', 'horizontal-split', 'vertical-split', 'new-tab' ]
 let g:ycm_filetype_whitelist = { '*': 1 }
-"
 
+
+let g:tagbar_ctags_bin='/usr/local/bin/ctags'  " Proper Ctags locations
+let g:tagbar_width=26                          " Default is 40, seems too wide
+noremap  <Leader>y :TagbarToggle       " Display panel with y (or ,y)

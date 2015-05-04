@@ -7,5 +7,11 @@ set cursorline cursorcolumn
 Bundle 'udonmai/Conque-Shell'
 Bundle 'digitaltoad/vim-jade.git'
 Bundle 'wavded/vim-stylus'
+Plugin 'ryanss/vim-hackernews'
+Plugin 'Shougo/vimproc.vim'
+Plugin 'Shougo/unite.vim'
+Plugin 'Shougo/vimshell.vim'
+Plugin 'derekwyatt/vim-scala'
+Plugin 'jeaye/color_coded'
 map ; :
 set textwidth=80

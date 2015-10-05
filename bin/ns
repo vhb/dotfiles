@@ -1,0 +1,3 @@
+#!/bin/bash
+kill `ps aux | grep 'python3' | grep 'ns_auth.py' | awk '{print $2}'`
+~/.bin/ns_auth/ns_auth.py -f ~/.bin/ns_auth/boudon_v.ini

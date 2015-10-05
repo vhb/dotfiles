@@ -1,5 +1,4 @@
 #!/usr/bin/perl -w
-;qa
 # jogsoul.pl v1.1
 # usage: jogsoul.pl [configuration file location]
 

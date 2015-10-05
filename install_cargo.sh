@@ -1,3 +1,4 @@
+# Made by vhb
 triple=x86_64-apple-darwin
 curl -O https://static.rust-lang.org/cargo-dist/cargo-nightly-$triple.tar.gz
 tar xf cargo-nightly-$triple.tar.gz

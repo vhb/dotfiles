@@ -8,19 +8,19 @@ rpm -ivh epel-release-7-5.noarch.rpm
 rm -fr $EPEL_FILE
 
 # Install base stuffs
-yum install sudo
-yum groupinstall -y development # Way to much thing but way to easy
+dnf install sudo
+dnf groupinstall -y development # Way to much thing but way to easy
 
 # Add some usefull stuff
-yum install -y zsh strace cmake htop mosh mlocate zlib-dev xz-libs openssl-devel sqlite-devel bzip2-devel 
+dnf install -y zsh strace cmake htop mosh mlocate zlib-dev xz-libs openssl-devel sqlite-devel bzip2-devel 
 
 # Setup docker
-yum -y install docker
+dnf -y install docker
 chkconfig docker on
 service docker start
 
 # Setup python modules
-yum -y install python-pip 
+dnf -y install python-pip 
 pip install virtualenv
 
 USERNAME=vhb

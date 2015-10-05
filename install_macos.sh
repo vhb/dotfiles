@@ -53,6 +53,6 @@ brew install $brew_binaries
 brew cask install $brew_cask_app
 brew cask alfred
 
-brew doctor
+# brew doctor
 
-sh ./install_cargo.sh
+# sh ./install_cargo.sh

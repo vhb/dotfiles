@@ -1,0 +1,33 @@
+#!/bin/bash
+
+# Like `tmux select-pane`, but if Vim is running in the current pane it sends
+# a `<C-h/j/k/l>` keystroke to Vim instead.
+vim_aware_selectpane() {
+    set -e
+    direction=$1
+    cmd="$(tmux display -p '#{pane_current_command}')"
+    cmd="$(basename "$cmd" | tr A-Z a-z)"
+    if [ "${cmd%m}" = "vi" ]; then
+        # forward the keystroke to Vim
+        #tmux display-message "vim_aware: $direction"
+        tmux send-keys C-w $direction
+    else
+        tmux_direction="$(echo "${direction#-}" | tr '\\hjkl' 'lLDUR')"
+        #tmux display-message "vim_aware: $tmux_direction"
+        tmux select-pane "-$tmux_direction"
+    fi
+}
+
+# Input should be tty dev.
+read -n 1 -t 1 input < $1
+
+# Handle the keys we're interested in; otherwise, pass the full
+# sequence through (i.e. <C+w>+whatever).
+case $input in
+    h ) vim_aware_selectpane "h" ;;
+    j ) vim_aware_selectpane "j" ;;
+    k ) vim_aware_selectpane "k" ;;
+    l ) vim_aware_selectpane "l" ;;
+    * ) tmux send-keys C-w $input ;;
+esac
+

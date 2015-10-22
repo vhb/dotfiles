@@ -12,8 +12,19 @@ Plugin 'Shougo/vimproc.vim'
 Plugin 'Shougo/unite.vim'
 Plugin 'Shougo/vimshell.vim'
 Plugin 'derekwyatt/vim-scala'
+Plugin 'christoomey/vim-tmux-navigator'
+imap kj <Esc>
+imap jk <Esc>
 map ; :
 set textwidth=80
+let g:tmux_navigator_no_mappings = 1
+
+nnoremap <silent> <C-W>h :TmuxNavigateLeft<cr>
+nnoremap <silent> <C-W>j :TmuxNavigateDown<cr>
+nnoremap <silent> <C-W>k :TmuxNavigateUp<cr>
+nnoremap <silent> <C-W>l :TmuxNavigateRight<cr>
+"nnoremap <silent> {Previous-Mapping} :TmuxNavigatePrevious<cr>
+
 
 let g:ycm_key_list_select_completion = ['<C-n>', '<Down>']
 let g:ycm_key_list_previous_completion = ['<C-p>', '<Up>']
